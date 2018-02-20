@@ -2,7 +2,7 @@
 // @name        View original image for Google images
 // @namespace   https://github.com/Brownies
 // @description Click a search result to view original image instead of doing silly Google things
-// @include     *google*/search*
+// @include     *google.com/search*tbm=isch*
 // @exclude     %exclude%
 // @version     0.1
 // @grant       none
@@ -31,6 +31,7 @@ window.onload = function () {
     }
     
     results[i].setAttribute('href', new_href);
+    results[i].setAttribute('rel', 'noreferrer'); //circumvent hotlink blocks
     results[i].addEventListener('click', function (event) {
       event.stopPropagation();
     }, true);
