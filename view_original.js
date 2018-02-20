@@ -32,6 +32,8 @@ window.onload = function () {
     
     results[i].setAttribute('href', new_href);
     results[i].setAttribute('rel', 'noreferrer'); //circumvent hotlink blocks
+    results[i].setAttribute('target', '_blank');
+    
     results[i].addEventListener('click', function (event) {
       event.stopPropagation();
     }, true);
